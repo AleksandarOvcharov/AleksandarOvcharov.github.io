@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Дебилните програмисти</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="gradient-link">
+            <h1 class="gradient-text">Дебилните програмисти</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="people/aleksandar.html">Александър Овчаров</a></li>
+                <li><a href="people/ivan.html">Иван Стойков</a></li>
+                <li><a href="people/atanas.html">Атанас Стойков</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Контакти на екипа</h2>
+            <p>Свържете се с нас чрез Discord:</p>
+            <div class="discord-contact">
+                <span class="discord-name">Александър Овчаров</span>
+                <button class="discord-button" onclick="copyToClipboard('Valhal4o1331')">
+                     <i class="fab fa-discord"></i>
+                    Valhal4o1331
+                </button>
+            </div>
+            <div class="discord-contact">
+                <span class="discord-name">Иван Стойков</span>
+                <button class="discord-button" onclick="copyToClipboard('GoodTimewithRIP_KATT')">
+                     <i class="fab fa-discord"></i>
+                     GoodTimewithRIP_KATT
+                </button>
+            </div>
+            <div class="discord-contact">
+                <span class="discord-name">Атанас Стойков</span>
+                <button class="discord-button" onclick="copyToClipboard('MrPotato1223')">
+                     <i class="fab fa-discord"></i>
+                    MrPotato1223
+                </button>
+            </div>
+            <div class="discord-contact">
+              <span class="discord-name">Дискорд Сървър</span>
+              <button class="discord-button" onclick="window.open('https://discord.gg/vYdjFtWp', '_blank');">
+                   <i class="fab fa-discord"></i>
+                  Дискорд Сървър
+              </button>
+          </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Дебилните програмисти. Всички права запазени.</p>
+    </footer>
+    <div id="notification" class="notification">
+       <i class="fab fa-discord"></i>
+       <span id="notification-text">Discord ID-то е копирано!</span>
+       <div class="progress-bar"></div> <!-- Прогрес бар елемент -->
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

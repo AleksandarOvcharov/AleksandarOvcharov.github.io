@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александър О. - Дебилните програмисти</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+       <a href="../index.html" class="gradient-link">
+              <h1 class="gradient-text">Проектите на Александър Овчаров</h1>      
+       </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Начало</a></li>
+                <li><a href="aleksandar.html">Александър Овчаров</a></li>
+                <li><a href="atanas.html">Атанас Стойков</a></li>
+                <li><a href="ivan.html">Иван Стойков</a></li>
+                <li><a href="../contact.html">Контакти</a></li> <!-- Линк към новата страница за контакти -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+       <div class="code-container">
+        <section>
+            <h2>Username Generator [TEAM WORK]</h2>
+            <pre><code class="language-csharp">
+//Username Generator
+
+Console.Write("What is your name: ");
+String name = Console.ReadLine();
+
+Console.Write("How old are you: ");
+int age = Convert.ToInt32(Console.ReadLine());
+
+int maxPrefixes = 5;
+
+Random random = new Random();
+int randomNumberPrefix = random.Next(1,maxPrefixes+1);
+
+//String Declaration
+String namePrefixOne = "Mr.";
+String namePrefixTwo = "Light";
+String namePrefixThree = "Shadow";
+String namePrefixFour = "Dark";
+String namePrefixFive = "Gotiniq";
+
+Console.Write("What is your username symbol: ");
+char prefixSymbol = Convert.ToChar(Console.ReadLine());
+
+switch (randomNumberPrefix)
+{
+    case 1:
+        Console.WriteLine("Your username is " + prefixSymbol + namePrefixOne + name + age);
+        break;
+    case 2:
+        Console.WriteLine("Your username is " + prefixSymbol + namePrefixTwo + name + age);
+        break;
+    case 3:
+        Console.WriteLine("Your username is " + prefixSymbol + namePrefixThree + name + age);
+        break;
+    case 4:
+        Console.WriteLine("Your username is " + prefixSymbol + namePrefixFour + name + age);
+        break;
+    case 5:
+        Console.WriteLine("Your username is " + prefixSymbol + namePrefixFive + name + age);
+        break;
+}
+
+Console.ReadKey();
+            </code></pre>
+            </div>
+            
+        </section>
+
+       <div class="code-container">
+        <section>
+              <h2>Road Measurement Project</h2>
+              <pre><code class="language-csharp">
+Console.Write("What measurement system you want to find - Road[R]; Speed[S]; Time[T]: ");
+
+String unit = Console.ReadLine();
+unit = unit.ToUpper();
+
+//Init Varialbes
+double speed;
+double time;
+double road;
+
+switch (unit)
+{
+    case "R":
+        Console.Write("Enter speed in km/h: ");
+        speed = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter time in h: ");
+        time = Convert.ToInt32(Console.ReadLine());
+
+        road = speed * time;
+        Console.WriteLine("The distance is: " + road + "km");
+        break;
+
+    case "S":
+        Console.Write("Enter distance in km: ");
+        road = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter time in h: ");
+        time = Convert.ToInt32(Console.ReadLine());
+
+        speed = road / time;
+        Console.WriteLine("The average speed is: " + speed + "km/h");
+        break;
+
+    case "T":
+        Console.Write("Enter speed in km/h: ");
+        speed = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter distance in km: ");
+        road = Convert.ToInt32(Console.ReadLine());
+
+        time = road / speed;
+        Console.WriteLine("The taken time is: " + time + "h");
+        break;
+}
+              </code></pre>
+          </section>
+          </div>
+
+       <div class="code-container">
+       <section>
+              <h2>Class Project [PRACTICE]</h2>
+              <pre><code class="language-csharp">
+Pizza pizza = new Pizza();
+
+pizza.Eat();
+
+Console.ReadKey();
+
+class Food
+{
+    public virtual void Eat()
+    {
+
+    }
+}
+
+class Pizza : Food
+{
+    public override void Eat()
+    {
+        Console.WriteLine("The pizza was eaten.");
+    }
+}
+
+class Burger : Food
+{
+    public override void Eat()
+    {
+        Console.WriteLine("The burger was eaten.");
+    }
+}
+              </code></pre>
+          </section>
+          </div>
+
+       <div class="code-container">
+       <section>
+              <h2>To-Do List</h2>
+              <pre><code class="language-csharp">
+using System;
+using System.Collections.Generic;
+
+bool appRunning = true;
+List<string> tasks = new List<string>();
+
+while (appRunning)
+{
+    Console.WriteLine("Type:");
+    Console.WriteLine("For Adding Tasks - 1");
+    Console.WriteLine("For Deleting Tasks - 2");
+    Console.WriteLine("For Marking Tasks as Completed - 3");
+    Console.WriteLine("For seeing all Tasks - 4");
+
+    static void Empty()
+    {
+        Console.WriteLine();
+    }
+
+    char action = Convert.ToChar(Console.ReadLine());
+
+    switch (action)
+    {
+        case '1':
+            Console.Write("[ADD] Add Task Name: ");
+            string addTask = Console.ReadLine();
+            tasks.Add(addTask);
+            Empty();
+
+            Console.WriteLine("Tasks:");
+            Empty();
+            foreach (string task in tasks)
+            {
+                Console.WriteLine(task);
+            }
+            Empty();
+            break;
+
+        case '2':
+            Console.Write("[DELETE] Add Task Name: ");
+            string removeTask = Console.ReadLine();
+            tasks.Remove(removeTask);
+            Empty();
+
+            Console.WriteLine("Tasks:");
+            Empty();
+            foreach (string task in tasks)
+            {
+                Console.WriteLine(task);
+            }
+            Empty();
+            break;
+
+        case '3':
+            Console.Write("[DONE] Add Task Name: ");
+            string finishTask = Console.ReadLine();
+            tasks.Remove(finishTask);
+            Empty();
+
+            Console.WriteLine("Tasks:");
+            Empty();
+            foreach (string task in tasks)
+            {
+                Console.WriteLine(task);
+            }
+            Empty();
+            break;
+        case '4':
+            Console.WriteLine("Tasks:");
+            Empty();
+            foreach (string task in tasks)
+            {
+                Console.WriteLine(task);
+            }
+            Empty();
+            break;
+    }
+
+    Console.Write("Do you want to see again [Y/N]: ");
+    string response = Console.ReadLine().ToUpper();
+
+    if (response != "Y")
+    {
+        appRunning = false;
+        Empty();
+    }
+}          
+              </code></pre>
+          </section>
+          </div>
+
+          <div id="copyNotification" class="notification-code">Code copied to clipboard!</div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Дебилните програмисти. Всички права запазени.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-csharp.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дебилните програмисти</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="gradient-link">
+            <h1 class="gradient-text">Дебилните програмисти</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="people/aleksandar.html">Александър Овчаров</a></li>
+                <li><a href="people/atanas.html">Атанас Стойков</a></li>
+                <li><a href="people/ivan.html">Иван Стойков</a></li>
+                <li><a href="contact.html">Контакти</a></li> <!-- Линк към новата страница за контакти -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+       <div class="centered-sections">
+        <!-- Секция "За нас" -->
+        <section>
+            <h2>За нас</h2>
+            <p>"Дебилните програмисти" е екип от талантливи програмисти, които обединяват усилия, за да създадат интересни и иновативни проекти. Тук споделяме знанията си, изграждаме нови идеи и показваме проектите си на света.</p>
+        </section>
+
+        <!-- Секция "Нашата мисия" -->
+        <section>
+            <h2>Нашата мисия</h2>
+            <p>Мисията ни е да вдъхновим останалите програмисти, както и начинаещите в областта, като покажем, че всичко е възможно с правилния подход и упоритост.</p>
+        </section>
+
+        <section class="languages">
+              <h2>Езици, с които програмираме</h2>
+              <div class="language-icons">
+                  <i class="fab fa-html5" title="HTML"></i>
+                  <i class="fab fa-css3-alt" title="CSS"></i>
+                  <i class="fab fa-js-square" title="JavaScript"></i>
+                  <i class="fab fa-python" title="Python"></i>
+                  <i class="devicon-csharp-plain" title="C#"></i>
+              </div>
+          </section>          
+
+        <!-- Секция "Нашите проекти" -->
+        <section>
+            <h2>Нашите проекти</h2>
+            <p>Тук може да откриете разнообразие от проекти, създадени от екипа.</p>
+            <ul>
+                <li>Софтуер със C#</li>
+                <li>Софтуер с оптимизиран код</li>
+                <li>Приложения за практика</li>
+                <li>Работа със .NET Framework</li>
+            </ul>
+        </section>
+
+        <!-- Нова секция за контакти -->
+        <section id="contact">
+            <h2>Свържете се с нас [ФУНКЦИЯТА НЕ РАБОТИ]</h2>
+            <form id="contactForm">
+                <label for="name">Име:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Имейл:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Съобщение:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" id="submitButton">Изпрати</button>
+            </form>
+        </section>
+       </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Дебилните програмисти. Всички права запазени.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-csharp.min.js"></script>
+</html>

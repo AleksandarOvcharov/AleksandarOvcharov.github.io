@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Атанас С. - Дебилните програмисти</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+       <a href="../index.html" class="gradient-link">
+              <h1 class="gradient-text">Проектите на Атанас Стойков</h1>      
+       </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Начало</a></li>
+                <li><a href="aleksandar.html">Александър Овчаров</a></li>
+                <li><a href="atanas.html">Атанас Стойков</a></li>
+                <li><a href="ivan.html">Иван Стойков</a></li>
+                <li><a href="../contact.html">Контакти</a></li> <!-- Линк към новата страница за контакти -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+       <div class="code-container">
+              <section>
+                    <h2>Username Generator [TEAM WORK]</h2>
+                  <pre><code class="language-csharp" class="codeText">
+//Username Generator
+      
+Console.Write("What is your name: ");
+String name = Console.ReadLine();
+      
+Console.Write("How old are you: ");
+int age = Convert.ToInt32(Console.ReadLine());
+      
+int maxPrefixes = 5;
+      
+Random random = new Random();
+int randomNumberPrefix = random.Next(1,maxPrefixes+1);
+      
+//String Declaration
+String namePrefixOne = "Mr.";
+String namePrefixTwo = "Light";
+String namePrefixThree = "Shadow";
+String namePrefixFour = "Dark";
+String namePrefixFive = "Gotiniq";
+      
+Console.Write("What is your username symbol: ");
+char prefixSymbol = Convert.ToChar(Console.ReadLine());
+      
+switch (randomNumberPrefix)
+{
+       case 1:
+           Console.WriteLine("Your username is " + prefixSymbol + namePrefixOne + name + age);
+           break;
+       case 2:
+           Console.WriteLine("Your username is " + prefixSymbol + namePrefixTwo + name + age);
+           break;
+       case 3:
+           Console.WriteLine("Your username is " + prefixSymbol + namePrefixThree + name + age);
+           break;
+       case 4:
+           Console.WriteLine("Your username is " + prefixSymbol + namePrefixFour + name + age);
+           break;
+       case 5:
+           Console.WriteLine("Your username is " + prefixSymbol + namePrefixFive + name + age);
+           break;
+}
+      
+Console.ReadKey();
+                  </code></pre>
+             </div>
+                </section>
+
+          <div class="code-container">
+          <section>
+              <h2>Converter from Celsius to Fahrenheit</h2>
+            <pre><code class="language-csharp" class="codeText">
+//Username Generator
+
+Console.Write("What is your name: ");
+String name = Console.ReadLine();
+              
+Console.Write("How old are you: ");
+int age = Convert.ToInt32(Console.ReadLine());
+              
+int maxPrefixes = 5;
+              
+Random random = new Random();
+int randomNumberPrefix = random.Next(1,maxPrefixes+1);
+              
+//String Declaration
+String namePrefixOne = "Mr.";
+String namePrefixTwo = "Light";
+String namePrefixThree = "Shadow";
+String namePrefixFour = "Dark";
+String namePrefixFive = "Gotiniq";
+              
+Console.Write("What is your username symbol: ");
+char prefixSymbol = Convert.ToChar(Console.ReadLine());
+              
+switch (randomNumberPrefix)
+{
+       case 1:
+              Console.WriteLine("Your username is " + prefixSymbol + namePrefixOne + name + age);
+              break;
+       case 2:
+              Console.WriteLine("Your username is " + prefixSymbol + namePrefixTwo + name + age);
+              break;
+       case 3:
+              Console.WriteLine("Your username is " + prefixSymbol + namePrefixThree + name + age);
+              break;
+       case 4:
+              Console.WriteLine("Your username is " + prefixSymbol + namePrefixFour + name + age);
+              break;
+       case 5:
+              Console.WriteLine("Your username is " + prefixSymbol + namePrefixFive + name + age);
+              break;
+}
+              
+Console.ReadKey();         
+            </code></pre>
+       </div>
+          </section>
+
+          <div class="code-container">
+              <section>
+                  <h2>Basic Calcualator</h2>
+                  <pre><code class="language-csharp" class="codeText">
+Console.Write("Enter first number: ");
+double num1 = Convert.ToDouble(Console.ReadLine());
+      
+Console.Write("Enter second number: ");
+double num2 = Convert.ToDouble(Console.ReadLine());
+      
+Console.Write("Enter a operation: ");
+char operation = Convert.ToChar(Console.ReadLine());
+      
+switch (operation)
+{
+       case '+':
+           Console.WriteLine(num1 + num2);
+           break;
+       case '-':
+           Console.WriteLine(num1 - num2);
+           break;
+       case '':
+           Console.WriteLine(num1 num2);
+           break;
+       case '/':
+           Console.WriteLine(num1 / num2);
+           break;
+       default:
+          Console.WriteLine("Invalid operation");
+          return;
+}
+
+Console.ReadKey();
+                  </code></pre>
+             </div>
+             </section>
+
+             <div id="copyNotification" class="notification-code">Code copied to clipboard!</div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Дебилните програмисти. Всички права запазени.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-csharp.min.js"></script>
+</body>
+</html>
