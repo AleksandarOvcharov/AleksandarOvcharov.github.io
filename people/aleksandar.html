@@ -260,6 +260,44 @@ while (appRunning)
           </section>
           </div>
 
+        <div class="code-container">
+        <section>
+            <h2>Username Generator [UPGRADED]</h2>
+            <pre><code class="language-csharp">
+//Username Generator [UPGRADED]
+using System.Collections.Generic;
+
+Random random = new Random();
+
+List<string> Prefixes = new List<string>();
+
+//Init all prefixes
+Prefixes.Add("Gotiniq");
+Prefixes.Add("Glupaka");
+Prefixes.Add("Shadow");
+Prefixes.Add("TheGamer");
+Prefixes.Add("Dark");
+Prefixes.Add("TheGamer");
+
+//Min and max range of choosing
+int minRange = 1;
+int maxRange = Prefixes.Count;
+
+int chosenPrefixNumber = random.Next(minRange, maxRange);
+
+string chosenPrefix = Prefixes.ElementAt(chosenPrefixNumber);
+
+Console.Write("What is your name: ");
+string name = Console.ReadLine();
+
+Console.Write("What is your symbol: ");
+char symbol = Convert.ToChar(Console.ReadLine());
+
+Console.WriteLine($"Your username is: {symbol}{chosenPrefix}{name}");
+              </code></pre>
+          </section>
+          </div>
+
           <div id="copyNotification" class="notification-code">Code copied to clipboard!</div>
     </main>
     <footer>
